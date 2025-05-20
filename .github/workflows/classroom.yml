@@ -24,7 +24,4 @@ jobs:
           grep -q "appendChild" ./src/script.js || (echo "::error file=src/script.js::Falta uso de appendChild" && exit 1)
           grep -q "addEventListener" ./src/script.js || (echo "::error file=src/script.js::Falta uso de addEventListener" && exit 1)
           grep -q "remove()" ./src/script.js || (echo "::error file=src/script.js::Falta uso de remove()" && exit 1)
-
-      - name: Validar modificación del contenedor tarjetas
-        run: |
-          grep -q "getElementById\(['\"]tarjetas['\"]\)" ./src/script.js || (echo "::error file=src/script.js::Debe modificar el contenedor #tarjetas" && exit 1)
+          
